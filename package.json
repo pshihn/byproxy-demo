@@ -22,7 +22,7 @@
   "homepage": "https://github.com/pshihn/byproxy-demo#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "byproxy": "0.0.3",
+    "byproxy-serve": "0.0.4",
     "express": "^4.16.4"
   }
 }

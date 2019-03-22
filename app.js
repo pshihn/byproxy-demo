@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser')
-const byproxy = require('byproxy');
+const byproxy = require('byproxy-serve');
 const app = express();
 const port = 3000;
 
