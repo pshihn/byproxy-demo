@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>By Proxy Demo</title>
+  <script src="https://unpkg.com/byproxy@0.0.3/dist/byproxy-link.js"></script>
+</head>
+
+<body>
+  <script>
+    (async () => {
+      const calculator = byproxy.link('/calculator');
+
+      calculator.opCount = 0;
+      console.log(await calculator.add(2, 6));
+      console.log(await calculator.subtract(6, 2));
+      console.log(await calculator.opCount);
+
+    })();
+  </script>
+</body>
+
+</html>
