@@ -10,12 +10,21 @@
 <body>
   <script>
     (async () => {
+      // Proxy the calculator
       const calculator = byproxy.link('/calculator');
-
       calculator.opCount = 0;
-      console.log(await calculator.add(2, 6));
-      console.log(await calculator.subtract(6, 2));
-      console.log(await calculator.opCount);
+      console.log('6 + 2 = ', await calculator.add(2, 6));
+      console.log('6 - 2 = ', await calculator.subtract(6, 2));
+      console.log('Op count = ', await calculator.opCount);
+
+      // Proxy the Trig module
+      const trig = byproxy.link('/trig');
+      console.log('Sine(90 degrees) = ', await trig.sin(Math.PI / 2));
+      console.log('Cosine(90 degrees) = ', await trig.cos(Math.PI / 2));
+
+      // Proxy a function
+      const hello = byproxy.link('/hello');
+      console.log(await hello('John'));
 
     })();
   </script>
